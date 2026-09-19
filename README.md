@@ -10,6 +10,7 @@
 - `core/ui/BottomNavigationBar.kt` — 하단 네비게이션 바
 - `res/font` — Pretendard 폰트
 - `res/drawable` — 하단바 아이콘 5개 (`ic_home`, `ic_search`, `ic_favorite`, `ic_orderhistory`, `ic_profile`)
+- `orderhistory/ui/component/OrderActionButton.kt` — 「같은 메뉴 담기」「바로 주문」 버튼 (그대로 가져다 써요)
 - `orderhistory/ui/screen/OrderHistoryScreen.kt` — 비어 있는 화면 (여기서부터 시작해요)
 
 ## 먼저 할 일: 이미지·아이콘 가져오기
