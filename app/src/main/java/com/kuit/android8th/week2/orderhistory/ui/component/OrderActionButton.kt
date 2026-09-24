@@ -3,6 +3,7 @@ package com.kuit.android8th.week2.orderhistory.ui.component
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.height
@@ -19,7 +20,6 @@ import com.kuit.android8th.week2.core.ui.theme.Gray300
 import com.kuit.android8th.week2.core.ui.theme.Mint
 import com.kuit.android8th.week2.core.ui.theme.White
 import com.kuit.android8th.week2.core.ui.theme.head_02_B_20
-import com.kuit.android8th.week2.core.ui.theme.head_03_B_16
 import com.kuit.android8th.week2.core.ui.theme.head_05_B_10
 
 
@@ -49,9 +49,14 @@ fun OrderActionButton(
             .clickable(enabled = enabled, onClick = onClick),
         contentAlignment = Alignment.Center,
     ) {
-        Column(horizontalAlignment = Alignment.CenterHorizontally) {
+        Column(
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.spacedBy(4.dp)
+        ) {
             Text(text = label, style = textStyle, color = if (enabled) Black else Gray300)
+
             subLabel?.let { Text(text = it, style = head_05_B_10, color = Gray300) }
         }
     }
 }
+

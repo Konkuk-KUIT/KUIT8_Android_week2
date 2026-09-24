@@ -31,11 +31,26 @@ import com.kuit.android8th.week2.core.ui.theme.White
 import com.kuit.android8th.week2.core.ui.theme.body_02_R_12
 
 enum class BottomNavItem(val label: String, @param:DrawableRes val iconRes: Int) {
-    HOME("홈", R.drawable.ic_home),
-    SEARCH("검색", R.drawable.ic_search),
-    FAVORITE("즐겨찾기", R.drawable.ic_favorite),
-    ORDER_HISTORY("주문내역", R.drawable.ic_orderhistory),
-    MY("My 이츠", R.drawable.ic_profile),
+    HOME(
+        "홈",
+        R.drawable.ic_home
+    ),
+    SEARCH(
+        "검색",
+        R.drawable.ic_search
+    ),
+    FAVORITE(
+        "즐겨찾기",
+        R.drawable.ic_favorite
+    ),
+    ORDER_HISTORY(
+        "주문내역",
+        R.drawable.ic_orderhistory
+    ),
+    MY(
+        "My 이츠",
+        R.drawable.ic_profile
+    ),
 }
 
 @Composable
@@ -44,7 +59,9 @@ fun BottomNavigationBar(
     onSelect: (BottomNavItem) -> Unit,
     modifier: Modifier = Modifier,
 ) {
-    Column(modifier = modifier.fillMaxWidth().background(White)) {
+    Column(modifier = modifier
+        .fillMaxWidth()
+        .background(White)) {
         HorizontalDivider(color = Gray300)
         Row(
             modifier = Modifier
@@ -69,7 +86,11 @@ fun BottomNavigationBar(
                         modifier = Modifier.size(24.dp),
                     )
                     Spacer(modifier = Modifier.height(3.dp))
-                    Text(text = item.label, style = body_02_R_12, color = tint)
+                    Text(
+                        text = item.label,
+                        style = body_02_R_12,
+                        color = tint
+                    )
                 }
             }
         }
@@ -79,5 +100,7 @@ fun BottomNavigationBar(
 @Preview(showBackground = true)
 @Composable
 private fun BottomNavigationBarPrev() {
-    BottomNavigationBar(selected = BottomNavItem.ORDER_HISTORY, onSelect = {})
+    BottomNavigationBar(
+        selected = BottomNavItem.ORDER_HISTORY,
+        onSelect = {})
 }
