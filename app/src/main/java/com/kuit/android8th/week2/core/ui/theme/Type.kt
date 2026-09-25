@@ -17,6 +17,7 @@ val Pretendard = FontFamily(
 // 쿠팡이츠 Font System (Figma 기준 그대로 이름 맞춤)
 val head_01_B_24 = TextStyle(fontFamily = Pretendard, fontWeight = FontWeight.Bold, fontSize = 24.sp, lineHeight = 24.sp)
 val head_02_B_20 = TextStyle(fontFamily = Pretendard, fontWeight = FontWeight.Bold, fontSize = 20.sp, lineHeight = 20.sp)
+
 val head_03_B_16 = TextStyle(fontFamily = Pretendard, fontWeight = FontWeight.Bold, fontSize = 16.sp, lineHeight = 16.sp)
 val head_03_SB_16 = TextStyle(fontFamily = Pretendard, fontWeight = FontWeight.SemiBold, fontSize = 16.sp, lineHeight = 16.sp)
 val head_03_R_16 = TextStyle(fontFamily = Pretendard, fontWeight = FontWeight.Normal, fontSize = 16.sp, lineHeight = 16.sp)
