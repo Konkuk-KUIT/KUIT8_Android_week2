@@ -15,5 +15,4 @@ data class Order (
     val isFavorite: Boolean = false,
     val canReorderNow: Boolean = false
 
-
 )

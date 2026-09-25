@@ -112,7 +112,6 @@ fun OrderHistoryItem(
                 contentDescription = "하트",
                 tint = if (isFavorite) Red else Black,
                 modifier = Modifier.size(20.dp).clickable{isFavorite = !isFavorite}
-
             )
         }
         Spacer(modifier = Modifier.height(15.dp))

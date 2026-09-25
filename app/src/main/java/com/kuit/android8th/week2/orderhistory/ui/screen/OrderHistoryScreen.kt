@@ -130,7 +130,6 @@ fun OrderHistoryScreen(
             }
         }
     }
-    
 }
 
 @Preview(showBackground = true)
