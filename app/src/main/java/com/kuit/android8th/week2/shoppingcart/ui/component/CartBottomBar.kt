@@ -15,6 +15,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.kuit.android8th.week2.core.ui.theme.Black
 import com.kuit.android8th.week2.core.ui.theme.Gray100
@@ -24,7 +25,10 @@ import com.kuit.android8th.week2.core.ui.theme.head_02_B_20
 import com.kuit.android8th.week2.core.ui.theme.head_03_B_16
 
 @Composable
-fun CartBottomBar(modifier: Modifier = Modifier) {
+fun CartBottomBar(
+    totalAmount: Int,
+    modifier: Modifier = Modifier
+) {
     Row(
         modifier = modifier
             .fillMaxWidth()
@@ -39,7 +43,7 @@ fun CartBottomBar(modifier: Modifier = Modifier) {
             modifier = Modifier.weight(1f)
         ) {
             Text(
-                text = "48,500원",
+                text = "${"%,d".format(totalAmount)}원",
                 color = Black,
                 style = head_02_B_20
             )
@@ -79,4 +83,10 @@ fun CartOrderButton(
             color = Black
         )
     }
+}
+
+@Preview
+@Composable
+private fun CartBottomBarPrev() {
+    CartBottomBar(45800)
 }

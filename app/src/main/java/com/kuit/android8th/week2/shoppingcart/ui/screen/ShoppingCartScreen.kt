@@ -35,6 +35,7 @@ fun ShoppingCartScreen(modifier: Modifier = Modifier) {
     var selectedDeliveryMethod by remember {
         mutableStateOf("가게배달")
     }
+    val totalAmount = cartItems.sumOf { it.price*it.quantity }
     Scaffold(
         modifier = modifier,
         containerColor = White,
@@ -42,7 +43,7 @@ fun ShoppingCartScreen(modifier: Modifier = Modifier) {
             CartTopBar()
         },
         bottomBar = {
-            CartBottomBar()
+            CartBottomBar(totalAmount)
         }
     ) { innerPadding ->
         LazyColumn(
@@ -154,7 +155,7 @@ fun ShoppingCartScreen(modifier: Modifier = Modifier) {
             }
             item {
                 PaymentCard(
-                    menuAmount = 48500,
+                    menuAmount = totalAmount,
                     deliveryAmount = 0,
                     modifier = Modifier.padding(horizontal = 20.dp)
                 )

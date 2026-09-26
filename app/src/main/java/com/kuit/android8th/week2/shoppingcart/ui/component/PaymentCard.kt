@@ -14,6 +14,7 @@ import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.kuit.android8th.week2.core.ui.theme.Black
 import com.kuit.android8th.week2.core.ui.theme.Gray300
@@ -83,7 +84,7 @@ fun PaymentCard(
             )
 
             Text(
-                text = "${totalAmount}원",
+                text = "${"%,d".format(totalAmount)}원",
                 style = head_04_SB_14,
                 color = Black
             )
@@ -108,9 +109,15 @@ private fun PaymentAmountRow(
         )
 
         Text(
-            text = "${amount}원",
+            text = "${"%,d".format(amount)}원",
             style = body_02_SB_12,
             color = Black
         )
     }
+}
+
+@Preview
+@Composable
+private fun PaymentCardPrev() {
+    PaymentCard(45800,0)
 }
